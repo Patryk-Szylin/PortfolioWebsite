@@ -1,0 +1,58 @@
+﻿@model List<PortfolioWebsite.Models.ProjectModelView>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="jumbotron">
+    <h3>Game & Web Developer</h3>
+    <h1>Patryk Szylin</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        @*Fetching data from database will appear here along with a forloop*@
+        @foreach (var project in Model)
+        {
+            <div class="col-lg-2 img-container">
+                <p>Project Title</p>
+                <img class="project-image" src="@project.ImageUrl" alt="project" />
+                <div class="image-text">
+                    <p> @project.Description</p>
+                </div>
+            </div>
+        }
+
+
+        @*<div class="col-lg-2 img-container">
+            <p>One project goes here</p>
+            <img class="project-image" src="https://i.imgur.com/XYkHnJl.jpg" alt="project" />
+            <div class="image-text">
+                <p> this is my project</p>
+            </div>
+        </div>*@
+        @*<div class="col-lg-2">
+            <p>One project goes here</p>
+        </div>
+        <div class="col-lg-2">
+            <p>One project goes here</p>
+        </div>
+        <div class="col-lg-2">
+            <p>One project goes here</p>
+        </div>
+        <div class="col-lg-2">
+            <p>One project goes here</p>
+        </div>
+        <div class="col-lg-2">
+            <p>One project goes here</p>
+        </div>*@
+
+    </div>
+</div>
+
+
+
+
+
